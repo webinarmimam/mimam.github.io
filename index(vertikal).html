@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+</head>
+<body>
+<div class="w3-sidebar w3-bar-block w3-light-grey w3-card" style="width:130px">
+ <h5 class="w3-bar-item">MENU</h5>
+ <button class="w3-bar-item w3-button tablink" onclick="openMenu(event, 'Mobil')">Mobil</button>
+ <button class="w3-bar-item w3-button tablink" onclick="openMenu(event, 'Profile')">Profile</button>
+ <button class="w3-bar-item w3-button tablink" onclick="openMenu(event, 'UnikomMart')">UnikomMart</button>
+ <button class="w3-bar-item w3-button tablink" onclick="openMenu(event, 'Kampus')">Kampus</button>
+ <button class="w3-bar-item w3-button tablink" onclick="openMenu(event, 'Foto')">Foto</button>
+ <button class="w3-bar-item w3-button" onclick="document.location='index.html'">Horizontal</button>
+</div>
+<div style="margin-left:130px">
+<div class="w3-padding"><img src="atas.jpg" style="height: 200px; width: 100%"></div>
+<div id="Mobil" class="w3-container menu" style="display:none">
+ <h2>Mobil</h2>
+ <img class="w3-animate-fading" src="img_rr_03.jpg" style="height: 420px; width: 50%">
+</div>
+<div id="Profile" class="w3-container menu" style="display:none">
+ <h2>Home</h2>
+ <center>
+ <h1>Belajar HTML dan CSS</h1>
+ Mata Kuliah Pemograman WEB 1<br>
+ 10121092-Muhammad Imam Naufal Rabbani IF-3<br>
+ Universitas Komputer Indonesia
+ </center>
+</div>
+<div id="UnikomMart" class="w3-container menu" style="display:none">
+ <h2>UnikomMart</h2>
+ <img class="w3-animate-bottom" src="minum.jpg" style="width: 50%">
+</div>
+<div id="Kampus" class="w3-container menu" style="display:none">
+ <h2>Kampus</h2>
+ <img class="w3-animate-top" src="gedung.jpg" style="width: 46%">
+</div>
+<div id="Foto" class="w3-container menu" style="display:none">
+ <h2>Cha Eun Woo</h2>
+ <img class="w3-animate-zoom" src="cha-eun-woo.jpg" style="width: 46%">
+</div>
+<script>
+function openMenu(evt, namaMenu) {
+ var i, x, tablinks;
+ x = document.getElementsByClassName("menu");
+ for (i = 0; i < x.length; i++) {
+ x[i].style.display = "none";
+ }
+ tablinks = document.getElementsByClassName("tablink");
+ for (i = 0; i < x.length; i++) {
+ tablinks[i].className = tablinks[i].className.replace(" w3-green", "");
+ }
+ document.getElementById(namaMenu).style.display = "block";
+ evt.currentTarget.className += " w3-green";
+}
+</script>
+</body>
+</html>

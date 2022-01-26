@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+</head>
+<body>
+<div class="w3-container">
+<img src="atas.jpg" style="height: 200px; width: 100%">
+</div>
+<div class="w3-bar w3-black">
+ <button class="w3-bar-item w3-button" onclick="openMenu('Mobil')">Mobil</button>
+ <button class="w3-bar-item w3-button" onclick="openMenu('Profile')">Profile</button>
+ <button class="w3-bar-item w3-button" onclick="openMenu('UnikomMart')">UnikomMart</button>
+ <button class="w3-bar-item w3-button" onclick="openMenu('Kampus')">Kampus</button>
+ <button class="w3-bar-item w3-button" onclick="openMenu('Foto')">Foto</button>
+ <button class="w3-bar-item w3-button" onclick="document.location='index(vertikal).html'">Vertikal</button>
+</div>
+<div id="Mobil" class="w3-container menu" style="display:none">
+ <h2>Mobil</h2>
+ <img class="w3-animate-fading" src="img_rr_03.jpg" style="height: 420px; width: 50%">
+</div>
+<div id="Profile" class="w3-container menu" style="display:none">
+ <h2>Home</h2>
+ <center>
+ <h1>Belajar HTML dan CSS</h1>
+ Mata Kuliah Pemograman WEB 1<br>
+ 10121092-Muhammad Imam Naufal Rabbani IF-3<br>
+ Universitas Komputer Indonesia
+ </center>
+</div>
+<div id="UnikomMart" class="w3-container menu" style="display:none">
+ <h2>UnikomMart</h2>
+ <img class="w3-animate-bottom" src="minum.jpg" style="width: 50%">
+</div>
+<div id="Kampus" class="w3-container menu" style="display:none">
+ <h2>Kampus</h2>
+ <img class="w3-animate-top" src="gedung.jpg" style="width: 46%">
+</div>
+<div id="Foto" class="w3-container menu" style="display:none">
+ <h2>Cha Eun Woo</h2>
+ <img class="w3-animate-zoom" src="cha-eun-woo.jpg" style="width: 46%">
+</div>
+<script>
+function openMenu(namaMenu) {
+ var i;
+ var x = document.getElementsByClassName("menu");
+ for (i = 0; i < x.length; i++) {
+ x[i].style.display = "none";
+ }
+ document.getElementById(namaMenu).style.display = "block";
+}
+</script>
+</body>
+</html>
